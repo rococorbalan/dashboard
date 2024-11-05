@@ -3,6 +3,7 @@
 
 :root {
     --main-red: #f43f5e;
+    --main-white: #fff1f2;
 }
 
 * {
@@ -59,7 +60,7 @@ ul, li {
 
 .nav-menu {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2 1fr);
 
     font-weight: bold;
     font-size: 1.5rem;
@@ -80,25 +81,75 @@ ul, li {
 }
 
 .main-section {
-    border: 15px solid red;
     display: grid;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    background-color: var(--main-white);
 }
 
 .nav-bar {
-    border: 10px solid yellowgreen;
     grid-row: 1 / 2;
-
     display: grid;
+    grid-template-rows: min-content 1fr;
+    gap: 10px;
+
+    padding: 15px 50px;
 }
 
-.nav-bar div {
-    border: 1px dotted black;
+.seach-bar {
+    height: min-content;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+}
+
+.search-input {
+    flex: 1;
+    height: 20px;
+    border: none;
+    background-color: #ffe4e6;
+    border-radius: 15px;
+    text-align: left;
+    padding: 5px 15px;
+}
+
+.search-input:focus{   
+    outline: none;
+}
+
+.nav-bar button{
+    border: none;
+    background-color: white;
+}
+
+.icon{
+    width: 20px;
+    height: auto;
+    transform: scaleX(-1);
+}
+
+.profile-sec {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: black;
+    text-decoration: none;
+}
+
+.profile-picture img{
+    width: 45px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.name{
+    font-size: 1.15rem;
+    font-weight: 600;
 }
 
 .content {
     border: 10px solid plum;
-    grid-row: 2/ 6;
+    grid-row: 2/ 7;
 
     display: grid;
     grid-auto-flow: column;

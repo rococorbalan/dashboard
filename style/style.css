@@ -240,8 +240,12 @@ ul, li {
     grid-template-rows: repeat(4, 1fr);
 }
 
-.announcements h1, .trending h1 {
+h1 {
     font-size: 1.5rem
+}
+
+.announcements h1, .projects h1 {
+    margin-top: 0;
 }
 
 .announcements-block h2{
@@ -304,4 +308,81 @@ ul, li {
     display: flex;
     flex-direction: column;
     margin: 20px 0;
+}
+
+.projects {
+    margin-right: 30px;
+}
+
+.projects-block {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+    gap: 30px;
+}
+
+.project {
+    background-color: var(--main-white);
+    height: 150px;
+    border-radius: 15px;
+    padding: 30px;
+    border-left: 8px solid #4ade80;
+
+    box-shadow: 1px 3px 5px 0px rgba(76,5,25,0.35);
+    -webkit-box-shadow: 1px 3px 5px 0px rgba(76,5,25,0.35);
+    -moz-box-shadow: 1px 3px 5px 0px rgba(76,5,25,0.35);
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.project h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    align-self: center;
+}
+
+.project-description {
+    text-align: justify;
+}
+
+.project-btn {
+    align-self: flex-end;
+    justify-self: flex-end;
+
+    display: flex;
+    gap: 30px;
+}
+
+.view {
+    all: unset;
+    cursor: grab;
+    background: url('../icons/eye-plus-outline.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+}
+
+.share {
+    all: unset;
+    cursor: grab;
+    background: url('../icons/source-fork.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+}
+
+.favorite {
+    all: unset;
+    cursor: grab;
+    background: url('../icons/star-plus-outline.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
 }

@@ -20,7 +20,8 @@ html, body {
     display: grid;
     grid-template-columns: min-content 1fr;
     
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 
 .sidebar{
@@ -164,10 +165,11 @@ ul, li {
    align-items: center;
    flex-wrap: wrap;
    height: min-content;
+   margin-top: 0 !important;
 }
 
 .status img {
-    width: 80px;
+    width: 70px;
     height: auto;
     border-radius: 50%;
 }
@@ -223,7 +225,7 @@ ul, li {
 .announcements-block, .trending-block {
     display: grid;
 
-    padding: 20px 30px;
+    padding: 10px 30px;
 
     background-color: var(--main-white);
     border-radius: 15px;
@@ -241,7 +243,7 @@ ul, li {
 }
 
 h1 {
-    font-size: 1.5rem
+    font-size: 1.2rem
 }
 
 .announcements h1, .projects h1 {
@@ -285,12 +287,12 @@ h1 {
 
 .trend {
     height: min-content;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .trend img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin-right: 20px;
     align-self: center;
 }
@@ -307,7 +309,7 @@ h1 {
 .project-trend {
     display: flex;
     flex-direction: column;
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 .projects {
@@ -334,6 +336,7 @@ h1 {
 
     display: grid;
     grid-template-rows: repeat(3, 1fr);
+    overflow: hidden;
 }
 
 .project h2 {
@@ -352,12 +355,13 @@ h1 {
 
     display: flex;
     gap: 30px;
+    position: absolute;
 }
 
 .view {
     all: unset;
     cursor: grab;
-    background: url('../icons/eye-plus-outline.svg');
+    background: url('../icons/svg/eye-plus-outline.svg');
     background-size: contain;
     background-repeat: no-repeat;
     width: 25px;
@@ -368,7 +372,7 @@ h1 {
 .share {
     all: unset;
     cursor: grab;
-    background: url('../icons/source-fork.svg');
+    background: url('../icons/svg/source-fork.svg');
     background-size: contain;
     background-repeat: no-repeat;
     width: 25px;
@@ -379,7 +383,7 @@ h1 {
 .favorite {
     all: unset;
     cursor: grab;
-    background: url('../icons/star-plus-outline.svg');
+    background: url('../icons/svg/star-plus-outline.svg');
     background-size: contain;
     background-repeat: no-repeat;
     width: 25px;
